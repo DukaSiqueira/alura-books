@@ -1,18 +1,28 @@
-import './style.css'
 import profile from '../../images/perfil.svg';
 import bag from '../../images/sacola.svg';
+import styled from 'styled-components';
+
+const ListIcon = styled.ul`
+  display: flex;
+`
+
+const Icon = styled.li`
+  margin-right: 40px;
+  width: 25px;
+  align-items: center;
+`
 
 const icons = [profile, bag];
 
 function IconsHeader() {
     return (
-        <ul className="App-icons">
+        <ListIcon>
         { icons.map( (icon) => (
-          <li className="App-icons-icon">
+          <Icon>
             <img src={icon} alt="icon"></img>
-          </li>
+          </Icon>
         ) ) }
-      </ul>
+      </ListIcon>
     );
 }
 
